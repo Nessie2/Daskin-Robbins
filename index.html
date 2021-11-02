@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellry Design landind Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="fas fa-bars"></a>
+        <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li> <a href="#">shop</a></li>
+            <li><a href="#">login</a></li>
+        </ul>
+    </header>
+
+    <section class="container">
+        <div class="content">
+            <h1><span class="span1">better</span> <span class="span2">Jewellry,</span> elegant style</h1>
+            <a href="#" class="btn">read more <i class="fas fa-arrow-right"></i> </a>
+            <div class="icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+
+
+
+        <div class="image"></div>
+        <div class="cursor"></div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+    <script>
+        $('.container').mousemove(function(e) {
+
+            var x = e.pageX + 'px';
+            var y = e.pageY + 'px';
+
+            $('.cursor').css({
+                'top': y,
+                'left': x
+            });
+            $(document).ready(function() {
+                var images = new Array('images/jewels\ img\ 4.jpg', 'images/jewels\ img\ 2.jpg', 'images/jewels\ img\ 3.jpg', 'images/jewel\ img\ 1.jpg');
+                setInterval(function() {
+                    var random = images[Math.floor(Math.random() * images.length)];
+                    $('.image').css('background', 'url(' + random + ' ) ');
+                }, 2500);
+
+
+            });
+        });
+    </script>
+</body>
+
+</html>
